@@ -87,60 +87,144 @@
         </section>
 
         <!-- ===================== 2. CATEGORÍAS (RF-03) ===================== -->
+        
         <section id="categorias" class="seccion seccion-negra" aria-labelledby="titulo-categorias">
             <div class="container">
-                <h2 id="titulo-categorias" class="titulo-seccion">Elige tu categoría</h2>
-                <p class="intro-seccion">Cuatro torneos, cuatro formas de jugar. Inscríbete en la que mejor se ajuste a tu equipo.</p>
 
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 g-lg-4">
+                <h2 id="titulo-categorias" class="titulo-seccion">
+                    Elige tu categoría
+                </h2>
+
+                <p class="intro-seccion">
+                    Cuatro torneos, cuatro formas de jugar. Inscríbete en la que mejor se ajuste a tu equipo.
+                </p>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+                    <!-- MOBA -->
                     <div class="col">
-                        <article class="tarjeta-categoria">
-                            <img src="assets/img/categorias/moba.jpg" width="960" height="600" loading="lazy"
-                                 class="img-fluid"
-                                 alt="Captura de una partida MOBA: varios héroes combaten en un bosque visto desde arriba, con el mapa en una esquina">
-                            <div class="tarjeta-cuerpo">
-                                <h3>MOBA</h3>
-                                <p class="modalidad">Equipos de 5 jugadores</p>
-                                <p>Estrategia en tiempo real: controla a un héroe, coordina a tu equipo y destruye la base rival.</p>
+                        <article class="card tarjeta-categoria h-100">
+                            <img src="assets/img/categorias/moba.jpg"
+                                width="960" height="600"
+                                loading="lazy"
+                                class="card-img-top img-fluid"
+                                alt="Partida MOBA vista desde arriba">
+
+                            <div class="card-body tarjeta-cuerpo">
+                                <h3 class="card-title">MOBA</h3>
+
+                                <button class="btn btn-warning w-100"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#info-moba"
+                                        aria-expanded="false"
+                                        aria-controls="info-moba">
+                                    Equipos de 5 jugadores
+                                </button>
+
+                                <div class="collapse mt-3" id="info-moba">
+                                    <p class="card-text">
+                                        Estrategia en tiempo real: controla a un héroe,
+                                        coordina a tu equipo y destruye la base rival.
+                                    </p>
+                                </div>
                             </div>
                         </article>
                     </div>
+
+                    <!-- DEPORTES -->
                     <div class="col">
-                        <article class="tarjeta-categoria">
-                            <img src="assets/img/categorias/deportes.jpg" width="960" height="540" loading="lazy"
-                                 class="img-fluid"
-                                 alt="Captura de un partido de fútbol virtual en un estadio lleno, con el marcador en la esquina superior">
-                            <div class="tarjeta-cuerpo">
-                                <h3>Deportes</h3>
-                                <p class="modalidad">1 contra 1, eliminación directa</p>
-                                <p>Fútbol virtual en partidos cortos. Cada gol cuenta y cada encuentro se decide en minutos.</p>
+                        <article class="card tarjeta-categoria h-100">
+                            <img src="assets/img/categorias/deportes.jpg"
+                                width="960" height="540"
+                                loading="lazy"
+                                class="card-img-top img-fluid"
+                                alt="Partido de fútbol virtual en un estadio">
+
+                            <div class="card-body tarjeta-cuerpo">
+                                <h3 class="card-title">Deportes</h3>
+
+                                <button class="btn btn-warning w-100"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#info-deportes"
+                                        aria-expanded="false"
+                                        aria-controls="info-deportes">
+                                    1 contra 1, eliminación directa
+                                </button>
+
+                                <div class="collapse mt-3" id="info-deportes">
+                                    <p class="card-text">
+                                        Fútbol virtual en partidos cortos. Cada gol cuenta
+                                        y cada encuentro se decide en minutos.
+                                    </p>
+                                </div>
                             </div>
                         </article>
                     </div>
+
+                    <!-- FPS -->
                     <div class="col">
-                        <article class="tarjeta-categoria">
-                            <img src="assets/img/categorias/fps.jpg" width="960" height="540" loading="lazy"
-                                 class="img-fluid"
-                                 alt="Captura en primera persona de un soldado que apunta con un rifle entre ruinas rodeadas de selva">
-                            <div class="tarjeta-cuerpo">
-                                <h3>FPS</h3>
-                                <p class="modalidad">Equipos de 4 jugadores</p>
-                                <p>Disparos en primera persona: puntería, reflejos y comunicación para dominar el mapa.</p>
+                        <article class="card tarjeta-categoria h-100">
+                            <img src="assets/img/categorias/fps.jpg"
+                                width="960" height="540"
+                                loading="lazy"
+                                class="card-img-top img-fluid"
+                                alt="Partida FPS en primera persona entre ruinas">
+
+                            <div class="card-body tarjeta-cuerpo">
+                                <h3 class="card-title">FPS</h3>
+
+                                <button class="btn btn-warning w-100"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#info-fps"
+                                        aria-expanded="false"
+                                        aria-controls="info-fps">
+                                    Equipos de 4 jugadores
+                                </button>
+
+                                <div class="collapse mt-3" id="info-fps">
+                                    <p class="card-text">
+                                        Disparos en primera persona: puntería, reflejos
+                                        y comunicación para dominar el mapa.
+                                    </p>
+                                </div>
                             </div>
                         </article>
                     </div>
+
+                    <!-- BATTLE ROYALE -->
                     <div class="col">
-                        <article class="tarjeta-categoria">
-                            <img src="assets/img/categorias/battle-royale.jpg" width="960" height="540" loading="lazy"
-                                 class="img-fluid"
-                                 alt="Captura de un Battle Royale: un personaje construye una rampa azul en una ladera con el mapa en la esquina">
-                            <div class="tarjeta-cuerpo">
-                                <h3>Battle Royale</h3>
-                                <p class="modalidad">Escuadras de 4 jugadores</p>
-                                <p>Aterriza, equípate y sobrevive: el último equipo en pie gana la partida.</p>
+                        <article class="card tarjeta-categoria h-100">
+                            <img src="assets/img/categorias/battle-royale.jpg"
+                                width="960" height="540"
+                                loading="lazy"
+                                class="card-img-top img-fluid"
+                                alt="Partida Battle Royale en una ladera">
+
+                            <div class="card-body tarjeta-cuerpo">
+                                <h3 class="card-title">Battle Royale</h3>
+
+                                <button class="btn btn-warning w-100"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#info-battle-royale"
+                                        aria-expanded="false"
+                                        aria-controls="info-battle-royale">
+                                    Escuadras de 4 jugadores
+                                </button>
+
+                                <div class="collapse mt-3" id="info-battle-royale">
+                                    <p class="card-text">
+                                        Aterriza, equípate y sobrevive: el último equipo
+                                        en pie gana la partida.
+                                    </p>
+                                </div>
                             </div>
                         </article>
                     </div>
+
                 </div>
             </div>
         </section>
