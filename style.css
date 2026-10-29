@@ -1,0 +1,659 @@
+/* ==========================================================================
+   GAMER FEST ESPE 2027 - estilos personalizados
+   Enfoque Mobile First: los estilos base son para celular (375 px).
+   Los cambios para pantallas grandes se activan desde lg (>= 992 px).
+   ========================================================================== */
+
+/* ---------- Fuentes locales (licencia OFL) ---------- */
+@font-face {
+    font-family: "Anton";
+    src: url("assets/fonts/Anton-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Barlow";
+    src: url("assets/fonts/Barlow-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Barlow";
+    src: url("assets/fonts/Barlow-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Barlow";
+    src: url("assets/fonts/Barlow-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Barlow";
+    src: url("assets/fonts/Barlow-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---------- Variables de diseño ---------- */
+:root {
+    --gf-morado: #8803B3;
+    --gf-amarillo: #F0FB03;
+    --gf-negro: #000000;
+    --gf-blanco: #FFFFFF;
+
+    --gf-fuente-titulos: "Anton", "Impact", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+    --gf-fuente-texto: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Sombra dura (sin desenfoque): firma visual de la página */
+    --gf-sombra-negra: 6px 6px 0 var(--gf-negro);
+    --gf-sombra-amarilla: 6px 6px 0 var(--gf-amarillo);
+
+    --bs-body-font-family: var(--gf-fuente-texto);
+    --bs-body-font-size: 1.0625rem;
+    --bs-body-line-height: 1.55;
+    --bs-body-bg: var(--gf-negro);
+    --bs-body-color: var(--gf-blanco);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--gf-negro);
+    color: var(--gf-blanco);
+    font-family: var(--gf-fuente-texto);
+    overflow-x: hidden; /* evita desbordamiento horizontal involuntario */
+}
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* El encabezado fijo no debe tapar el inicio de cada sección */
+section[id],
+footer[id] {
+    scroll-margin-top: 80px;
+}
+
+/* ---------- Accesibilidad ---------- */
+.saltar-contenido {
+    position: absolute;
+    left: 0.75rem;
+    top: -4rem;
+    z-index: 2000;
+    padding: 0.6rem 1rem;
+    background: var(--gf-amarillo);
+    color: var(--gf-negro);
+    font-weight: 700;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+}
+.saltar-contenido:focus {
+    top: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible,
+.form-check-input:focus-visible {
+    outline: 3px solid var(--gf-amarillo);
+    outline-offset: 3px;
+}
+
+/* ---------- Encabezado y navegación ---------- */
+.barra-principal {
+    background-color: var(--gf-negro);
+    border-bottom: 4px solid var(--gf-amarillo);
+    padding-block: 0.5rem;
+}
+
+.logo-nav {
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.marca-texto {
+    font-family: var(--gf-fuente-titulos);
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    color: var(--gf-amarillo);
+}
+
+.barra-principal .navbar-toggler {
+    border: 3px solid var(--gf-amarillo);
+    border-radius: 10px;
+}
+.barra-principal .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px var(--gf-morado);
+}
+
+.barra-principal .nav-link {
+    color: var(--gf-blanco);
+    font-weight: 600;
+    padding: 0.7rem 0.25rem;
+    border-bottom: 3px solid transparent;
+}
+.barra-principal .nav-link:hover,
+.barra-principal .nav-link:focus-visible {
+    color: var(--gf-amarillo);
+}
+.barra-principal .nav-link.active {
+    color: var(--gf-amarillo);
+    border-bottom-color: var(--gf-amarillo);
+}
+
+/* ---------- Botones ---------- */
+.btn-gf {
+    --bs-btn-color: var(--gf-negro);
+    --bs-btn-bg: var(--gf-amarillo);
+    --bs-btn-border-color: var(--gf-negro);
+    --bs-btn-hover-color: var(--gf-negro);
+    --bs-btn-hover-bg: var(--gf-blanco);
+    --bs-btn-hover-border-color: var(--gf-negro);
+    --bs-btn-active-color: var(--gf-negro);
+    --bs-btn-active-bg: var(--gf-blanco);
+    --bs-btn-active-border-color: var(--gf-negro);
+    --bs-btn-focus-shadow-rgb: 240, 251, 3;
+    --bs-btn-border-width: 3px;
+    --bs-btn-border-radius: 12px;
+    font-weight: 700;
+    box-shadow: var(--gf-sombra-negra);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-gf:hover,
+.btn-gf:focus-visible {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--gf-negro);
+}
+.btn-gf:active {
+    transform: translate(6px, 6px);
+    box-shadow: 0 0 0 var(--gf-negro);
+}
+
+.btn-gf-borde {
+    --bs-btn-color: var(--gf-amarillo);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--gf-amarillo);
+    --bs-btn-hover-color: var(--gf-negro);
+    --bs-btn-hover-bg: var(--gf-amarillo);
+    --bs-btn-hover-border-color: var(--gf-amarillo);
+    --bs-btn-active-color: var(--gf-negro);
+    --bs-btn-active-bg: var(--gf-amarillo);
+    --bs-btn-border-width: 3px;
+    --bs-btn-border-radius: 12px;
+    font-weight: 700;
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+    padding-block: 3.5rem;
+}
+
+.seccion-negra {
+    background-color: var(--gf-negro);
+    color: var(--gf-blanco);
+}
+.seccion-morada {
+    background-color: var(--gf-morado);
+    color: var(--gf-blanco);
+}
+.seccion-amarilla {
+    background-color: var(--gf-amarillo);
+    color: var(--gf-negro);
+}
+
+.titulo-seccion {
+    font-family: var(--gf-fuente-titulos);
+    font-weight: 400;
+    font-size: clamp(2.25rem, 9vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.75rem;
+}
+.seccion-negra .titulo-seccion { color: var(--gf-amarillo); }
+.seccion-morada .titulo-seccion { color: var(--gf-amarillo); }
+.seccion-amarilla .titulo-seccion { color: var(--gf-negro); }
+
+.intro-seccion {
+    max-width: 62ch;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+/* ---------- 1. Hero ---------- */
+.seccion-hero {
+    background-color: var(--gf-morado);
+    color: var(--gf-blanco);
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+    /* Corte inclinado inferior que recuerda las letras del logotipo */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.5rem), 0 100%);
+}
+
+.titulo-hero {
+    font-family: var(--gf-fuente-titulos);
+    font-weight: 400;
+    font-size: clamp(2.75rem, 13vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--gf-amarillo);
+    text-shadow: 4px 4px 0 var(--gf-negro);
+    margin-bottom: 1.25rem;
+}
+
+.invitacion {
+    font-weight: 600;
+    max-width: 34ch;
+}
+
+.descripcion-hero {
+    max-width: 52ch;
+    margin-bottom: 1.5rem;
+}
+
+.datos-evento {
+    background-color: var(--gf-negro);
+    border: 3px solid var(--gf-amarillo);
+    border-radius: 18px;
+    padding: 0.5rem 1.1rem;
+    margin-bottom: 1.75rem;
+    max-width: 30rem;
+    box-shadow: var(--gf-sombra-negra);
+}
+.datos-evento .dato {
+    padding: 0.65rem 0;
+}
+.datos-evento .dato + .dato {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.datos-evento dt {
+    color: var(--gf-amarillo);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+.datos-evento dd {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.nota-hero {
+    margin: 1.25rem 0 0;
+    font-size: 0.95rem;
+}
+
+.logo-hero {
+    max-width: min(100%, 320px);
+    border-radius: 28px;
+    border: 4px solid var(--gf-negro);
+    box-shadow: var(--gf-sombra-negra);
+}
+
+/* ---------- 2. Categorías ---------- */
+.tarjeta-categoria {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gf-morado);
+    border: 3px solid var(--gf-amarillo);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--gf-sombra-amarilla);
+}
+.tarjeta-categoria img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 3px solid var(--gf-amarillo);
+}
+.tarjeta-cuerpo {
+    padding: 1.1rem 1.25rem 1.4rem;
+}
+.tarjeta-cuerpo h3 {
+    font-family: var(--gf-fuente-titulos);
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    margin-bottom: 0.6rem;
+}
+.tarjeta-cuerpo p:last-child {
+    margin-bottom: 0;
+}
+.modalidad {
+    display: inline-block;
+    background-color: var(--gf-amarillo);
+    color: var(--gf-negro);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 0.8rem;
+}
+
+/* ---------- 3. Premios ---------- */
+.premio {
+    border: 3px solid var(--gf-negro);
+    border-radius: 20px;
+    padding: 1.5rem 1.5rem 1.75rem;
+    box-shadow: var(--gf-sombra-negra);
+}
+.premio h3 {
+    font-family: var(--gf-fuente-titulos);
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+}
+.premio-nombre {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+.premio p:last-child {
+    margin-bottom: 0;
+}
+.premio-primero {
+    background-color: var(--gf-negro);
+    color: var(--gf-blanco);
+}
+.premio-primero h3,
+.premio-primero .premio-nombre {
+    color: var(--gf-amarillo);
+}
+.premio-segundo,
+.premio-tercero {
+    background-color: var(--gf-morado);
+    color: var(--gf-blanco);
+}
+
+.condiciones {
+    margin-top: 2.5rem;
+    max-width: 70ch;
+}
+.condiciones h3 {
+    font-family: var(--gf-fuente-titulos);
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+.condiciones ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+}
+.condiciones li + li {
+    margin-top: 0.4rem;
+}
+
+/* ---------- 4. Auspiciantes ---------- */
+.auspiciante {
+    height: 100%;
+    background-color: var(--gf-negro);
+    border: 3px solid var(--gf-negro);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--gf-sombra-negra);
+}
+.auspiciante-logo {
+    background-color: var(--fondo-logo, var(--gf-negro));
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+}
+.auspiciante-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.auspiciante-info {
+    padding: 1rem 1.25rem 1.25rem;
+    text-align: center;
+}
+.auspiciante-info h3 {
+    font-family: var(--gf-fuente-titulos);
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+}
+.etiqueta-simulado {
+    display: inline-block;
+    margin: 0;
+    background-color: var(--gf-amarillo);
+    color: var(--gf-negro);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+}
+
+/* ---------- 5. Mapa ---------- */
+.mapa-contenedor {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 3px solid var(--gf-amarillo);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    box-shadow: 6px 6px 0 var(--gf-morado);
+}
+.mapa-contenedor iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ---------- 6. Formulario ---------- */
+.panel-formulario {
+    background-color: var(--gf-negro);
+    color: var(--gf-blanco);
+    border: 3px solid var(--gf-negro);
+    border-radius: 24px;
+    padding: 1.5rem 1.25rem;
+    box-shadow: 8px 8px 0 var(--gf-morado);
+    max-width: 62rem;
+}
+
+.aviso-demo {
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    color: #d9d9d9;
+}
+
+.panel-formulario .form-label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+.panel-formulario .form-control,
+.panel-formulario .form-select {
+    background-color: #1a1a1a;
+    color: var(--gf-blanco);
+    border: 2px solid #8c8c8c;
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+}
+.panel-formulario .form-control::placeholder {
+    color: #9a9a9a;
+}
+.panel-formulario .form-control:focus,
+.panel-formulario .form-select:focus {
+    border-color: var(--gf-amarillo);
+    box-shadow: 0 0 0 3px rgba(240, 251, 3, 0.35);
+}
+.panel-formulario .form-control.is-invalid,
+.panel-formulario .form-select.is-invalid {
+    border-color: #ff7b8a;
+}
+.panel-formulario .form-control.is-valid,
+.panel-formulario .form-select.is-valid {
+    border-color: #4fd18b;
+}
+.panel-formulario .form-text {
+    color: #cfcfcf;
+}
+.panel-formulario .invalid-feedback {
+    color: #ff9aa5;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.panel-formulario .form-check-input {
+    width: 1.35rem;
+    height: 1.35rem;
+    margin-top: 0.15rem;
+    border: 2px solid #8c8c8c;
+    background-color: #1a1a1a;
+}
+.panel-formulario .form-check-input:checked {
+    background-color: var(--gf-morado);
+    border-color: var(--gf-amarillo);
+}
+.panel-formulario .form-check-input.is-invalid {
+    border-color: #ff7b8a;
+}
+.panel-formulario .form-check-input.is-invalid ~ .form-check-label {
+    color: var(--gf-blanco);
+}
+.panel-formulario .form-control[type="file"]::file-selector-button {
+    background-color: var(--gf-amarillo);
+    color: var(--gf-negro);
+    font-weight: 700;
+    border: 0;
+    border-right: 2px solid #8c8c8c;
+}
+
+#resumenErrores ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.25rem;
+}
+#resumenErrores a {
+    color: inherit;
+    font-weight: 600;
+}
+
+/* Ventana de confirmación */
+.modal-gf {
+    background-color: var(--gf-negro);
+    color: var(--gf-blanco);
+    border: 3px solid var(--gf-amarillo);
+    border-radius: 20px;
+    box-shadow: 8px 8px 0 var(--gf-morado);
+}
+.modal-gf .modal-title {
+    font-family: var(--gf-fuente-titulos);
+    font-weight: 400;
+    color: var(--gf-amarillo);
+}
+
+/* ---------- 7. Pie de página ---------- */
+.pie {
+    background-color: var(--gf-negro);
+    color: var(--gf-blanco);
+    border-top: 4px solid var(--gf-amarillo);
+    padding-block: 2.5rem;
+}
+.pie-titulo {
+    font-family: var(--gf-fuente-titulos);
+    font-size: 1.6rem;
+    color: var(--gf-amarillo);
+    margin-bottom: 0.4rem;
+}
+.pie-subtitulo {
+    font-weight: 700;
+    color: var(--gf-amarillo);
+    margin-bottom: 0.5rem;
+}
+.pie-texto,
+.pie-nota {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+.pie-nota {
+    color: #cfcfcf;
+}
+.redes a {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border: 2px solid var(--gf-amarillo);
+    border-radius: 999px;
+    color: var(--gf-blanco);
+    font-weight: 600;
+    text-decoration: none;
+}
+.redes a:hover,
+.redes a:focus-visible {
+    background-color: var(--gf-amarillo);
+    color: var(--gf-negro);
+}
+.pie-correo {
+    color: var(--gf-blanco);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+.pie-correo:hover,
+.pie-correo:focus-visible {
+    color: var(--gf-amarillo);
+}
+
+/* ==========================================================================
+   Pantallas grandes (breakpoint lg de Bootstrap, >= 992 px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .marca-texto {
+        font-size: 1.35rem;
+    }
+    .barra-principal .nav-link {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .seccion {
+        padding-block: 5.5rem;
+    }
+
+    .seccion-hero {
+        padding-top: 4.5rem;
+        padding-bottom: 8rem;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+    }
+    .logo-hero {
+        max-width: 100%;
+    }
+
+    .tarjeta-cuerpo h3 {
+        font-size: 1.7rem;
+    }
+
+    /* Podio: el primer lugar sobresale */
+    .premio {
+        padding: 1.75rem;
+    }
+    .premio-primero {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .mapa-contenedor {
+        aspect-ratio: 16 / 7;
+    }
+
+    .panel-formulario {
+        padding: 2.5rem;
+    }
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GAMER FEST ESPE 2027 | Torneo gamer universitario</title>
+    <meta name="description" content="Landing page de GAMER FEST ESPE 2027, un evento gamer universitario hipotético: categorías, premios, auspiciantes, ubicación e inscripción de demostración.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+
+    <!-- Bootstrap 5.3 local -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Mis estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <!-- ===================== ENCABEZADO Y NAVEGACIÓN (RF-01) ===================== -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg barra-principal" data-bs-theme="dark" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                    <img src="assets/img/logo/logo-gamerfest-nav.png" width="48" height="48" class="logo-nav"
+                         alt="Logotipo de Gamer Fest: un control de videojuego con las letras GAMER FEST en amarillo">
+                    <span class="marca-texto">GAMER FEST ESPE 2027</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#premios">Premios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#auspiciantes">Auspiciantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#inscripcion">Inscripción</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <!-- ===================== 1. INVITACIÓN E INFORMACIÓN (RF-02) ===================== -->
+        <section id="inicio" class="seccion-hero" aria-labelledby="titulo-hero">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-12 col-lg-7">
+                        <h1 id="titulo-hero" class="titulo-hero">GAMER FEST ESPE 2027</h1>
+                        <p class="lead invitacion">Arma tu equipo y vive un día completo de torneos abierto a toda la comunidad universitaria.</p>
+                        <p class="descripcion-hero">Compite en MOBA, deportes, FPS o Battle Royale, conoce a otros jugadores y gana premios para tu equipo.</p>
+
+                        <dl class="datos-evento">
+                            <div class="dato">
+                                <dt>Fecha</dt>
+                                <dd>Sábado 13 de marzo de 2027</dd>
+                            </div>
+                            <div class="dato">
+                                <dt>Horario</dt>
+                                <dd>De 09:00 a 18:00</dd>
+                            </div>
+                            <div class="dato">
+                                <dt>Lugar</dt>
+                                <dd>Campus Belisario Quevedo, ESPE</dd>
+                            </div>
+                        </dl>
+
+                        <a href="#inscripcion" class="btn btn-gf btn-lg">Inscríbete ahora</a>
+                        <p class="nota-hero">Evento hipotético con datos de demostración académica.</p>
+                    </div>
+
+                    <div class="col-12 col-lg-5 text-center">
+                        <img src="assets/img/logo/logo-gamerfest.png" width="800" height="800"
+                             class="img-fluid logo-hero"
+                             alt="Logotipo de Gamer Fest: control de videojuego amarillo y negro con las palabras GAMER FEST y gotas de pintura">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== 2. CATEGORÍAS (RF-03) ===================== -->
+        <section id="categorias" class="seccion seccion-negra" aria-labelledby="titulo-categorias">
+            <div class="container">
+                <h2 id="titulo-categorias" class="titulo-seccion">Elige tu categoría</h2>
+                <p class="intro-seccion">Cuatro torneos, cuatro formas de jugar. Inscríbete en la que mejor se ajuste a tu equipo.</p>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 g-lg-4">
+                    <div class="col">
+                        <article class="tarjeta-categoria">
+                            <img src="assets/img/categorias/moba.jpg" width="960" height="600" loading="lazy"
+                                 class="img-fluid"
+                                 alt="Captura de una partida MOBA: varios héroes combaten en un bosque visto desde arriba, con el mapa en una esquina">
+                            <div class="tarjeta-cuerpo">
+                                <h3>MOBA</h3>
+                                <p class="modalidad">Equipos de 5 jugadores</p>
+                                <p>Estrategia en tiempo real: controla a un héroe, coordina a tu equipo y destruye la base rival.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="tarjeta-categoria">
+                            <img src="assets/img/categorias/deportes.jpg" width="960" height="540" loading="lazy"
+                                 class="img-fluid"
+                                 alt="Captura de un partido de fútbol virtual en un estadio lleno, con el marcador en la esquina superior">
+                            <div class="tarjeta-cuerpo">
+                                <h3>Deportes</h3>
+                                <p class="modalidad">1 contra 1, eliminación directa</p>
+                                <p>Fútbol virtual en partidos cortos. Cada gol cuenta y cada encuentro se decide en minutos.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="tarjeta-categoria">
+                            <img src="assets/img/categorias/fps.jpg" width="960" height="540" loading="lazy"
+                                 class="img-fluid"
+                                 alt="Captura en primera persona de un soldado que apunta con un rifle entre ruinas rodeadas de selva">
+                            <div class="tarjeta-cuerpo">
+                                <h3>FPS</h3>
+                                <p class="modalidad">Equipos de 4 jugadores</p>
+                                <p>Disparos en primera persona: puntería, reflejos y comunicación para dominar el mapa.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="tarjeta-categoria">
+                            <img src="assets/img/categorias/battle-royale.jpg" width="960" height="540" loading="lazy"
+                                 class="img-fluid"
+                                 alt="Captura de un Battle Royale: un personaje construye una rampa azul en una ladera con el mapa en la esquina">
+                            <div class="tarjeta-cuerpo">
+                                <h3>Battle Royale</h3>
+                                <p class="modalidad">Escuadras de 4 jugadores</p>
+                                <p>Aterriza, equípate y sobrevive: el último equipo en pie gana la partida.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== 3. PREMIOS (RF-03) ===================== -->
+        <section id="premios" class="seccion seccion-amarilla" aria-labelledby="titulo-premios">
+            <div class="container">
+                <h2 id="titulo-premios" class="titulo-seccion">Premios</h2>
+                <p class="intro-seccion">Cada categoría premia a sus tres primeros lugares. Los premios son propuestas para esta demostración.</p>
+
+                <div class="row g-4 align-items-lg-end">
+                    <div class="col-12 col-lg-4 order-1 order-lg-2">
+                        <article class="premio premio-primero">
+                            <h3>1.er lugar</h3>
+                            <p class="premio-nombre">Kit gamer completo</p>
+                            <p>Teclado, mouse y audífonos para cada integrante, trofeo y certificado.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-4 order-2 order-lg-1">
+                        <article class="premio premio-segundo">
+                            <h3>2.º lugar</h3>
+                            <p class="premio-nombre">Audífonos gamer</p>
+                            <p>Un par de audífonos para cada integrante, medalla y certificado.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-4 order-3">
+                        <article class="premio premio-tercero">
+                            <h3>3.er lugar</h3>
+                            <p class="premio-nombre">Mouse y mouse pad</p>
+                            <p>Un mouse y un mouse pad para cada integrante, medalla y certificado.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="condiciones">
+                    <h3>Condiciones básicas</h3>
+                    <ul>
+                        <li>Solo participan los inscritos con comprobante validado y correo @espe.edu.ec.</li>
+                        <li>Cada equipo debe presentarse 30 minutos antes de su primera partida.</li>
+                        <li>Las trampas y las conductas ofensivas son motivo de descalificación.</li>
+                        <li>Los premios son propuestas demostrativas y no constituyen un anuncio oficial de la universidad.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== 4. AUSPICIANTES (RF-04) ===================== -->
+        <section id="auspiciantes" class="seccion seccion-morada" aria-labelledby="titulo-auspiciantes">
+            <div class="container">
+                <h2 id="titulo-auspiciantes" class="titulo-seccion">Auspiciantes</h2>
+                <p class="intro-seccion">Las marcas que acompañarían el torneo. Todos los auspiciantes son simulados y se usan solo con fines académicos.</p>
+
+                <div class="row row-cols-1 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <article class="auspiciante">
+                            <div class="auspiciante-logo" style="--fondo-logo: #000000;">
+                                <img src="assets/img/auspiciantes/corsair.png" width="1000" height="758" loading="lazy"
+                                     alt="Logotipo de Corsair: velas blancas sobre fondo negro">
+                            </div>
+                            <div class="auspiciante-info">
+                                <h3>Corsair</h3>
+                                <p class="etiqueta-simulado">Auspiciante simulado</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="auspiciante">
+                            <div class="auspiciante-logo" style="--fondo-logo: #28E9CF;">
+                                <img src="assets/img/auspiciantes/logitech.webp" width="860" height="527" loading="lazy"
+                                     alt="Logotipo de Logitech: palabra logitech en letras oscuras sobre fondo turquesa">
+                            </div>
+                            <div class="auspiciante-info">
+                                <h3>Logitech</h3>
+                                <p class="etiqueta-simulado">Auspiciante simulado</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="auspiciante">
+                            <div class="auspiciante-logo" style="--fondo-logo: #0F0909;">
+                                <img src="assets/img/auspiciantes/primus.jpg" width="937" height="197" loading="lazy"
+                                     alt="Logotipo de Primus: símbolo circular y la palabra PRIMUS en blanco sobre fondo negro">
+                            </div>
+                            <div class="auspiciante-info">
+                                <h3>Primus</h3>
+                                <p class="etiqueta-simulado">Auspiciante simulado</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== 5. UBICACIÓN / MAPA (RF-05, RI-03) ===================== -->
+        <section id="ubicacion" class="seccion seccion-negra" aria-labelledby="titulo-ubicacion">
+            <div class="container">
+                <h2 id="titulo-ubicacion" class="titulo-seccion">Ubicación</h2>
+                <div class="row g-3 align-items-center mb-4">
+                    <div class="col-12 col-lg-8">
+                        <p class="intro-seccion mb-0">
+                            Universidad de las Fuerzas Armadas ESPE, Extensión Belisario Quevedo, Latacunga, Cotopaxi, Ecuador.
+                            Si el mapa no carga, revisa tu conexión a Internet o abre la ubicación con el botón.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4 text-lg-end">
+                        <a class="btn btn-gf-borde" target="_blank" rel="noopener noreferrer"
+                           href="https://www.google.com/maps/search/?api=1&amp;query=Universidad+de+las+Fuerzas+Armadas+ESPE+Extensi%C3%B3n+Belisario+Quevedo">Abrir en Google Maps</a>
+                    </div>
+                </div>
+
+                <div class="mapa-contenedor">
+                    <iframe title="Mapa de la Universidad de las Fuerzas Armadas ESPE, Extensión Belisario Quevedo"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1119.4349845801225!2d-78.58379131865837!3d-0.9982318071105366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e7c398d3f%3A0xc4999bdc40abfc48!2sUniversidad%20De%20Las%20Fuerzas%20Armadas%20ESPE%20Extensi%C3%B3n%20Belisario%20Quevedo!5e0!3m2!1ses!2sec!4v1793200662197!5m2!1ses!2sec"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== 6. INSCRIPCIÓN (RF-06, RF-07, RF-08) ===================== -->
+        <section id="inscripcion" class="seccion seccion-amarilla" aria-labelledby="titulo-inscripcion">
+            <div class="container">
+                <h2 id="titulo-inscripcion" class="titulo-seccion">Inscripción</h2>
+                <p class="intro-seccion">Completa el formulario con datos ficticios. Es una demostración: no se envía ni se guarda ninguna información.</p>
+
+                <div class="panel-formulario" data-bs-theme="dark">
+                    <div id="resumenErrores" class="alert alert-danger d-none" role="alert" tabindex="-1"></div>
+
+                    <form id="formInscripcion" novalidate autocomplete="off" aria-describedby="avisoDemo">
+                        <p id="avisoDemo" class="aviso-demo">Los campos son obligatorios, salvo el nombre del equipo.</p>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-lg-6">
+                                <label for="nombres" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="nombres" name="nombres" maxlength="60"
+                                       required aria-required="true" aria-describedby="error-nombres">
+                                <div class="invalid-feedback" id="error-nombres"></div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="apellidos" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" maxlength="60"
+                                       required aria-required="true" aria-describedby="error-apellidos">
+                                <div class="invalid-feedback" id="error-apellidos"></div>
+                            </div>
+
+                            <div class="col-12 col-lg-6">
+                                <label for="correo" class="form-label">Correo institucional</label>
+                                <input type="email" class="form-control" id="correo" name="correo" maxlength="80"
+                                       placeholder="usuario@espe.edu.ec" inputmode="email"
+                                       required aria-required="true" aria-describedby="ayuda-correo error-correo">
+                                <div class="form-text" id="ayuda-correo">Solo se aceptan correos @espe.edu.ec.</div>
+                                <div class="invalid-feedback" id="error-correo"></div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="telefono" class="form-label">Celular</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" maxlength="14"
+                                       placeholder="0991234567" inputmode="numeric"
+                                       required aria-required="true" aria-describedby="ayuda-telefono error-telefono">
+                                <div class="form-text" id="ayuda-telefono">10 dígitos, empieza con 09.</div>
+                                <div class="invalid-feedback" id="error-telefono"></div>
+                            </div>
+
+                            <div class="col-12 col-lg-6">
+                                <label for="gamertag" class="form-label">Nombre de jugador (gamertag)</label>
+                                <input type="text" class="form-control" id="gamertag" name="gamertag" maxlength="20"
+                                       required aria-required="true" aria-describedby="ayuda-gamertag error-gamertag">
+                                <div class="form-text" id="ayuda-gamertag">Entre 3 y 20 caracteres, sin espacios.</div>
+                                <div class="invalid-feedback" id="error-gamertag"></div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="categoria" class="form-label">Categoría</label>
+                                <select class="form-select" id="categoria" name="categoria"
+                                        required aria-required="true" aria-describedby="error-categoria">
+                                    <option value="" selected>Elige una categoría</option>
+                                    <option value="MOBA">MOBA (equipos de 5)</option>
+                                    <option value="Deportes">Deportes (1 contra 1)</option>
+                                    <option value="FPS">FPS (equipos de 4)</option>
+                                    <option value="Battle Royale">Battle Royale (escuadras de 4)</option>
+                                </select>
+                                <div class="invalid-feedback" id="error-categoria"></div>
+                            </div>
+
+                            <div class="col-12 col-lg-6">
+                                <label for="equipo" class="form-label">Nombre del equipo (opcional)</label>
+                                <input type="text" class="form-control" id="equipo" name="equipo" maxlength="40"
+                                       aria-describedby="error-equipo">
+                                <div class="invalid-feedback" id="error-equipo"></div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="comprobante" class="form-label">Comprobante de inscripción</label>
+                                <input type="file" class="form-control" id="comprobante" name="comprobante"
+                                       accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
+                                       required aria-required="true" aria-describedby="ayuda-comprobante error-comprobante">
+                                <div class="form-text" id="ayuda-comprobante">PDF, JPG o PNG. Máximo 2 MB. Usa un archivo de prueba.</div>
+                                <div class="invalid-feedback" id="error-comprobante"></div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos"
+                                           required aria-required="true" aria-describedby="error-terminos">
+                                    <label class="form-check-label" for="terminos">
+                                        Acepto el reglamento del torneo y entiendo que esta inscripción es una demostración.
+                                    </label>
+                                    <div class="invalid-feedback" id="error-terminos"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-gf btn-lg">Enviar inscripción</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== 7. PIE DE PÁGINA (RF-09) ===================== -->
+    <footer class="pie" id="pie">
+        <div class="container">
+            <div class="row gy-4 align-items-center text-center text-lg-start">
+                <div class="col-12 col-lg-5">
+                    <p class="pie-titulo">GAMER FEST ESPE 2027</p>
+                    <p class="pie-texto">Evento universitario hipotético. Fecha, premios y auspiciantes son datos de demostración académica de la asignatura Programación Web.</p>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <p class="pie-subtitulo" id="titulo-redes">Síguenos</p>
+                    <ul class="redes list-unstyled d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-2" aria-labelledby="titulo-redes">
+                        <li><a href="https://www.instagram.com/gamerfest.ec/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/share/19nqwgMLDQ/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="#pie" data-enlace-demo>TikTok (enlace demostrativo)</a></li>
+                    </ul>
+                    <p class="pie-nota" id="notaRedes">El enlace de TikTok es ficticio y no lleva a ninguna cuenta.</p>
+                </div>
+
+                <div class="col-12 col-lg-3 text-lg-end">
+                    <p class="pie-subtitulo">Contacto</p>
+                    <a class="pie-correo" href="mailto:gamerfestespel@gmail.com">gamerfestespel@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirmación de demostración (RF-08) -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="tituloConfirmacion" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-gf">
+                <div class="modal-header border-0">
+                    <h2 class="modal-title fs-3" id="tituloConfirmacion">Inscripción enviada</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="mensajeConfirmacion"></p>
+                    <p class="mb-0 fw-semibold">Esto es una demostración: tus datos no se guardaron ni se enviaron a ningún servidor.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-gf" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript local -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Mi JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
